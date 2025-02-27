@@ -1,0 +1,140 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>SoundCAD</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+
+    <body>
+
+        <h1>SoundCAD</h1>
+        
+        <!-- Load external JavaScript -->
+        <script src="scripts.js"></script>
+
+        <p>Last Update: 26.02.2025</p>
+
+        <h2>Concept</h2>
+        <p>SoundCAD is a Windows software for composing sounds and music from scratch.
+            It is not modelling the sound itself, but rather the mechanical system creating it.
+            There is no direct manipulation of the sound.
+            Wave filters are taboo.
+            The concept of SoundCAD is best described with a quotation from Brian Eno:</p>
+        <p><i>Since I have always preferred making plans to executing them,
+            I have gravitated towards situations and systems that,
+            once set into operation, could create music with little or no intervention on my part.
+            That is to say, I tend towards the roles of the planner and programmer,
+            and then become an audience to the results.</i></p>
+        <p>SoundCAD puts you in these roles.
+            This is shown with the model of a small mechanical system.</p>
+        <h2>Sounds and Melodies</h2>
+        <p>The model of a mechanical system is created with a few clicks:</p>
+        <img src="img/hexagonal_grid_3x3.png" alt="Hexagonal Grid 3x3">
+        <p>This is a hexagonal grid of 3x3 radiobuttons and lines connecting them.
+            In the terms of SoundCAD, these are 3x3 Elements that are connected with Bindings.
+            Each Element, in turn, is a point mass and each Binding is an elastic spring.
+            For the Elements to oscillate, a force is applied to one or more of them.
+            The radiobuttons of the excitated Elements have a red background color. 
+            Here only one Element is excitated.</p>
+        <p>Each Element has a default mass of 0.000524 kg.
+            This is the mass of a sphere with diameter 0.01 m and density 1000.0 kg/m^3.
+            Each Binding has a default spring constant of 4096 N/m.
+            Plastics have similar densities.
+            Given the same load, the length 0.01 m and the default spring constant,
+            the extension of the Bindings equals the extension of a nylon thread with diameter 0.15 mm.</p>
+        <p>The force maximum is 0.4 N. The force is applied for 0.2 seconds.
+            After 1.0 seconds the kinetic energy of the system begins to dissipate.
+            When the oscillation starts, then the elastic deformations of the Bindings
+            are calculated, scaled and written to a 44.1 kHz stereo wave file.
+            The recording is stopped after 8 seconds.</p>
+        <p>Having planned and programmed, we now become an audience to the results.
+            These are the first seconds of the wave envelope of the created sound.
+            The left channel has higher amplitudes than the right channel:</p>
+        <img src="img/envelope1.png" alt="Hexagonal Grid 3x3">
+        <p>This is the created sound:</p>
+        <audio controls>
+            <source src="https://www.dropbox.com/scl/fi/hqnf84vx8y3msizmzd6nd/Test.wav?rlkey=nunntdtlc19ueylac461n05k4&st=s201wkuy&dl=1" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        <p>After one second, the high excitation frequency transforms itself into an oscillation with
+            much larger amplitudes and a significant lower frequency.
+            Due to the energy dissipation, the sound fades away soon and a melody can be played with it.
+            For its usage in a melody, the first second is removed and the sound is transformed to different pitches.
+            Then the first bars of Ravel's <i>Pavane pour une infante défunte</i> can be played with it:</p>
+        <audio controls>
+            <source src="https://www.dropbox.com/scl/fi/m8slnlxxi2graqi6e1z35/Melody.wav?rlkey=mmqy8i945m7skr6a6kdgxupfg&st=5fvfz1ig&dl=1" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        <h2>Soundscapes</h2>
+        <p>Even though it is astonishing that 9 point masses create this sound,
+            <i>becoming an audience to the result</i> goes beyond a sheer surprise.
+            It means giving the sound the time to develop itself and maintaining it
+            as long as it stays interesting.
+            This approach is illustrated by the follwing sound examples
+            that are created from a variety of mechanical systems with up to 144 Elements.
+            Having created the system and started the recording,
+            there has been no interaction or post-processing whatsoever.</p>
+        <p>The first sound is created from an instable mechanical system.
+            Due to a lack of Bindings, it is possible to rotate Elements relative to each other without changing the length of any Binding.
+            It takes about 7 seconds before the almost inaudible excitation frequency triggers a much louder and lower oscillation.
+            All other mechanical systems are stable.</p>
+        <audio controls>
+            <source src="https://www.dropbox.com/scl/fi/zyivo9c1baq4gnwoqh5k5/Test16_6.wav?rlkey=azz9l2lnmbaakk0eh7br0ymom&st=kwugkkkm&dl=1" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="https://www.dropbox.com/scl/fi/4y7tbjfxmmkia5wc6mva1/Test16_14.wav?rlkey=6rs5ki8yusko9jjxrjury4ngu&st=2g0vrnm4&dl=1" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="https://www.dropbox.com/scl/fi/vcnqcqlno87f5h8kal2kp/Test16_15_1.wav?rlkey=fqkh5fvza924ieb8zwrljs18l&st=rj0gf8g6&dl=1" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="https://www.dropbox.com/scl/fi/tcnbtk4b9icp0f4hlee53/Test16_15_2.wav?rlkey=z3n1v7qzw8zw1b799rmcamshn&st=w5bggf62&dl=1" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="https://www.dropbox.com/scl/fi/bddhye1oc3drzik4a5162/Test16_19_1.wav?rlkey=tmz5rziuum5lhp2p22658d2tv&st=8xzf8g2c&dl=1" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="https://www.dropbox.com/scl/fi/yxyka4t9nl3dk2qkksqd3/Test16_19_2.wav?rlkey=7nmq6u6l6celgzboam8avcgsq&st=fmqf0znd&dl=1" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="https://www.dropbox.com/scl/fi/5gvqcj98pwncw5llrp0l4/Test16_21_1.wav?rlkey=rx6ehmtaor7g46x2q1dmdxaa8&st=sr2dchrp&dl=1" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="https://www.dropbox.com/scl/fi/bkxbe2n4pwbyl1ft3qj2w/Test16_21_2.wav?rlkey=csh3rtxksbc4r3ydy1ugq4e5f&st=mauwhmj9&dl=1" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="https://www.dropbox.com/scl/fi/0tbia0gn16knnk0cl5fpg/Test16_22.wav?rlkey=vco783olzk1a5shmo1zx3gd34&st=d9rjpttx&dl=1" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        <h2>Software</h2>
+        <p>SoundCAD is technical software for musical purposes.
+            It communicates with 44.1 kHz stereo wave files and
+             - with the exception of the note frequencies - 
+            does not support the MIDI standard.</p>
+        <h2>Contact</h2>
+        <p>Depending on your feedback, I will turn this landing page into a website
+            and eventually distribute the software in some way.
+            For feedback and further information please contact:</p>
+        <p>Andreas Klein<br>
+            Sedanplatz 1<br>
+            65183 Wiesbaden<br>
+            Germany<br>
+            andreasmichael.klein@web.de</p>
+        
+    </body>
+
+</html>
